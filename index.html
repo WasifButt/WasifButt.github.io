@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- HTML Meta Tags -->
+    <title>Wasif Butt's Portfolio</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="description" content="Wasif's Personal Portfolio!">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<body>
+    <div id="vantaNet">
+        <div class="container">
+            <div class="row">
+                <a href="#" class="to-top" style="width:100%;" onclick="arrow_up()"></a>
+                <div class="item" id="biography">
+                    <h1 style="font-size:40px;">Hey there! I'm Wasif 👋🏼</h1>
+                    <br>
+
+                    <span id="fourth" class="hidden hide"><br><br><br>
+                        Here's some of my favourite technologies:<br>
+                            <br>• Front-end: Vue.js, React
+                            <br>• Back-end: PHP, MariaDB, jQuery, REST API, Flask, Django, Node.js, Java
+                            <br>• Hardware: Verilog, Assembly, Timing analysis, Linux development, ROS
+                            <br><br>And some paradigms I have experience with: <br><br>Object-oriented using Java and C++, functional using Python, concurrent using Rust and C++<br>
+                    </span>
+                    
+                    <span id="third" class="hidden hide"><br><br><br>
+                        Here's a quicklist of some projects I've worked on:<br>
+                            <br>• This website! (Dec 2020)
+                            <br>• Low-level text editor written in assebly C code for ARM architecture. (Mar 2020)
+                            <br>• GIS mapping system, which had all the basic features of Google maps. (Jan - Mar 2020)
+                            <br>• Super Mario Bros. game built using Verilog for a FPGA embedded system. (Dec 2019)<br>
+                    </span>
+
+                    <span id="second" class="hidden hide">
+                        Here's some of my professional work experience:
+                        <br><br>
+                        Full Stack Web Developer at The Hatchery<br>
+                        Sept 2020 - Present<br>
+                            <br>• The Hatchery is a startup hub at the UofT that provides new startups the resources to take their ideas to market.
+                            <br>• I help manage the company's platform, and add new features. So far, I've worked on AJAX forms, 
+                            a socket.io messaging system, and a python web scraping project.<br><br>
+
+                        Software Engineer at Cyberworks Robotics<br>
+                        June 2020 - Sept 2020<br>
+                            <br>• Cyberworks Robotics is a startup that develops AI robots for various industries to automate their processes.
+                            <br>• Created a web fleet management system and helped with robot development using AWS.<br>
+                    </span>
+
+                    <span id="first" class="visible"><br><br><br>
+                        I'm a 3rd year at the <strong>University of Toronto</strong> studying <strong>Computer Engineering.</strong><br><br>
+                        I'm passionate about building cool stuff and solving modern problems! I'm constantly picking up new technologies 
+                        and refining my craft. I'm currently looking for a 12 to 16 month PEY internship, connect with me using the right-hand side icons. 
+                        <br><br>
+                        Right now, I'm learning about, and interested in...
+                        <!-- <ul id="first"> -->
+                            <br>&emsp;&emsp;• Machine Learning<br>
+                            &emsp;&emsp;• Back-end development
+                            <br>&emsp;&emsp;• Developing on Embedded Systems<br>
+                        <!-- </ul>  -->
+                    </span>
+                    
+                    <br>
+                    <span style="position: absolute; bottom: 0; right: 0;">Use the arrows to scroll through my porfolio and learn more about me! </span>
+                </div>
+                <a href="#" class="to-top" style="transform: rotate(180deg); width:100%;" onclick="arrow_down()"></a>
+            </div>
+            <div class="row" id="picture">
+                <div class="item">
+                    <a href="https://www.instagram.com/instawab/" target="_blank"> <img src="profile.jpg"
+                            alt="Photo of Wasif"> </a>
+                </div>
+            </div>
+            <div class="iconrow" id="social">
+                <div class="item">
+                    <a href="https://www.linkedin.com/in/buttwasif" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="WasifButt_Resume.pdf" target="_blank">
+                        <i class="fas fa-file"></i>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="https://github.com/wasifbutt" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="mailto:wasifahmadbutt@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script async type="text/javascript" src="p5.min.js"></script>
+    <script async type="text/javascript" src="particles.js"></script>
+    <script src="three.r119.min.js"></script>
+    <script src="vanta.net.min.js"></script>
+    <script>
+        VANTA.NET({
+            el: "#vantaNet",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
+        })
+    </script>
+    <script>
+        var counter = 1; 
+        var click = 0; 
+        function wait(ms){
+           var start = new Date().getTime();
+           var end = start;
+           while(end < start + ms) {
+             end = new Date().getTime();
+          }
+        }
+        function fade(out, next) {
+            switch (out) {
+                case 1:
+                    $("#first").addClass("hidden");
+                    $("#first").removeClass("visible");
+                    break;
+                case 2:
+                    $("#second").addClass("hidden");
+                    $("#second").removeClass("visible");
+                    break;
+                case 3:
+                    $("#third").addClass("hidden");
+                    $("#third").removeClass("visible");
+                    break;
+                case 4:
+                    $("#fourth").addClass("hidden");
+                    $("#fourth").removeClass("visible");
+                    break;
+            }
+            let flag = false; 
+            $(".hidden").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", 
+                function(e){ 
+                    if (flag)
+                        return 
+                    switch (out) {
+                        case 1:
+                            $("#first").addClass("hide");
+                            break;
+                        case 2:
+                            $("#second").addClass("hide");
+                            break;
+                        case 3:
+                            $("#third").addClass("hide");
+                            break;
+                        case 4:
+                            $("#fourth").addClass("hide");
+                            break;
+                    }
+                    switch (next) {
+                        case 1:
+                            $("#first").removeClass("hide");
+                            $("#first").removeClass("hidden");
+                            $("#first").addClass("visible");
+                            break;
+                        case 2:
+                            $("#second").removeClass("hide");
+                            $("#second").removeClass("hidden");
+                            $("#second").addClass("visible");
+                            break;
+                        case 3:
+                            $("#third").removeClass("hide");
+                            $("#third").removeClass("hidden");
+                            $("#third").addClass("visible");
+                            break;
+                        case 4:
+                            $("#fourth").removeClass("hide");
+                            $("#fourth").removeClass("hidden");
+                            $("#fourth").addClass("visible");
+                            break;
+                    }
+                    flag = true 
+            }); 
+        }
+
+        function arrow_up() {
+            if (click == 0) {
+                click = 1 
+            } else { return }
+            let temp = counter 
+            counter += 1;
+            if (counter === 5)
+                counter = 1
+            fade(temp, counter)
+            click = 0;
+        }
+
+        function arrow_down() {
+            if (click == 0) {
+                click = 1 
+            } else { return }
+            let temp = counter 
+            counter -= 1;
+            if (counter === 0)
+                counter = 4
+            fade(temp, counter)
+            click = 0;
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+

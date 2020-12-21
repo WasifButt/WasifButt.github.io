@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow:hidden
+}
+
+.hide {
+    display: none;
+}
+.transitioning {
+    visibility: hidden;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+.to-top{
+    color:white;
+    text-align:center;
+    padding-top:1.8em;
+    display:inline-block;/* or block */
+    position:relative;
+    border-color:white;
+    text-decoration:none;
+    transition:all .3s ease-out;
+    border:1px;
+    border-style: solid;
+}
+.to-top:before{
+    content:'▲';
+    font-size:.9em;
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left:-.7em;
+    border:solid .13em white;
+    border-radius:10em;
+    width:1.4em;
+    height:1.4em;
+    line-height:1.3em;
+    border-color:inherit;
+    transition:transform .5s ease-in;
+    margin-top: .2rem;
+}
+.to-top:hover{
+    color:pink;
+    border-color:pink;
+}
+.to-top:hover:before{
+    transform: rotate(360deg);
+}
+
+#vantaNet {
+    position: absolute;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;    
+}
+
+
+body {
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
+    /* background: #F6F8FF; */
+    /* color: #364156; */
+    color: #FFFFFF;
+}
+
+a:link {
+    /* color: #364156; */
+    color: #FFFFFF;
+}
+
+a:visited {
+    /* color: #364156; */
+    color: #FFFFFF;
+}
+
+a:hover {
+    /* color: #5073b8; */
+    /* color: gray; */
+    color: #ff3f81;
+}
+
+a:active {
+    /* color: #364156; */
+    color: #FFFFFF;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    width: auto;
+    margin: 0.1em;
+}
+
+.iconrow {
+    width: 50;
+    margin: 0.1em; 
+}
+
+.item {
+    margin: 3px 8px;
+}
+
+.icon:before {
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6em;
+    padding: .2em;
+    display: inline-block;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    /* -webkit-font-smoothing: antialiased; */
+}
+
+.transparent{
+    background:rgba(1,1,1,0.5);
+}
+
+.icon-twitter:before {
+    content: '\f099';
+    /* color: #364156; */
+    color: #FFFFFF;
+}
+
+.icon-github:before {
+    content: '\f09b';
+    /* color: #364156; */
+    color: #FFFFFF;
+}
+
+.icon-linkedin:before {
+    content: '\f0e1';
+    /* color: #364156; */
+    color: #FFFFFF;
+}
+
+.icon-mail:before {
+    content: '\e800';
+    /* color: #364156; */
+    color: #FFFFFF;
+}
+
+#social > .item {
+    text-align: center;
+    animation: fadein 2s;
+    /* background-color: #F6F8FF; */
+    /* border: 2px solid #364156; */
+    border: 2px solid #FFFFFF;
+    padding: 10px;
+    overflow: hidden;
+    transition-duration: 0.4s;
+    transition-property: border-color;
+    border-radius: 10px;
+}
+    #social > .item:hover {
+        /* border-color: gray; */
+        border-color: #ff3f81;
+    }
+
+#picture img {
+    background: #FFFFFF;
+    padding: 2px;
+    animation: fadein 2s;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    /*transform: rotate(270deg);*/
+    border-radius: 10px;
+}
+
+#biography {
+    animation: fadein 2s;
+    max-width: 450px;
+    padding: 20px;
+    border-radius: 10px;
+    height: 500px;
+    position: relative;
+}
+
+/* @-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+} */
+
+/* #particles, #vignette {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+}
+
+#vignette {
+    //box-shadow: 0 0 800px #000000 inset;
+    z-index: -1;
+} */
+
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-flow: column-reverse;
+    }
+
+    #picture {
+        order: 1;
+    }
+
+    #social {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #biography {
+        text-align: center;
+    }
+}
