@@ -105,18 +105,20 @@
     <script async type="text/javascript" src="p5.min.js"></script>
     <script async type="text/javascript" src="particles.js"></script>
     <script src="three.r119.min.js"></script>
-    <script src="vanta.net.min.js"></script>
+    <script src="vanta.globe.min.js"></script>
     <script>
-        VANTA.NET({
-            el: "#vantaNet",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00
-        })
+    VANTA.GLOBE({
+      el: "#vantaNet",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x5deba8,
+      backgroundColor: 0x70404
+    })
     </script>
     <script>
         var counter = 1; 
